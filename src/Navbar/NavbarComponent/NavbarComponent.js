@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaCode, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import DarkModeToggle from "react-dark-mode-toggle";
 
 const NavbarComponent = () => {
 
