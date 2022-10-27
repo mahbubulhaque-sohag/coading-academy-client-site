@@ -36,12 +36,6 @@ const NavbarComponent = () => {
 
                     <Nav>
                         <Link><Button className='me-2 ' variant="outline-primary">theme</Button></Link>
-                        
-                    
-                           
-                       
-                           
-                        
                         <Nav.Link >
 
                             {

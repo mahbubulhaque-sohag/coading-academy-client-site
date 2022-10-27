@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 const Register = () => {
     const [error, setError] =useState('');
-    const {createUser, googleLogIn, updateUserProfile} = useContext(AuthContext);
+    const {createUser, googleLogIn, updateUserProfile, gitHubLogIn} = useContext(AuthContext);
 
   const handleRegister = event => {
     event.preventDefault();
@@ -51,7 +51,21 @@ const Register = () => {
       const user = result.user;
       console.log(user)
     })
-    .catch(error => console.error(error))
+    .catch(error => {
+      console.error(error)
+      setError(error)
+    })
+  }
+
+  const handleGitHubLogIn = () =>{
+    gitHubLogIn()
+    .then((result)=>{
+      const user = result.user;
+      console.log(user)
+      .catch((error)=>{
+        console.error(error)
+      setError(error)})
+    })
   }
     return (
         <Form onSubmit={handleRegister} className='w-50  mt-5 container'>
@@ -85,7 +99,7 @@ const Register = () => {
    <Button className='me-2' onClick={handleGoogleLogin}  variant="primary" type="submit">
       Sign in with Google
     </Button>
-   <Button  className='' variant="primary" type="submit">
+   <Button onClick={handleGitHubLogIn}  className='' variant="primary" type="submit">
       Sign in with GitHub
     </Button>
    </div>
