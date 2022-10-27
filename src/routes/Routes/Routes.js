@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
             {
                 path: '/courseDetails/:id',
                 loader: ({params})=> {
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://b610-lerning-platform-server-side-mahbubulhaque-sohag.vercel.app/courses/${params.id}`)
                 },
                 element: <SingleCourseDetail></SingleCourseDetail>
             },
@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
                 path: '/checkout/:id',
                 element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute> ,
                 loader: ({params})=> {
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://b610-lerning-platform-server-side-mahbubulhaque-sohag.vercel.app/courses/${params.id}`)
                 },
             }
         ]

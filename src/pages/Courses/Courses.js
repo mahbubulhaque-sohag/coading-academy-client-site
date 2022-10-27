@@ -11,7 +11,7 @@ const Courses = () => {
     return (
         <div className='container mt-5'>
             <div className='row'>
-                <div className='col-3'>
+                <div className='col-lg-3'>
                     <h2>this is courses</h2>
                     {
                         cousesData.map(course => <CourseNameNav
@@ -20,8 +20,8 @@ const Courses = () => {
                             ></CourseNameNav>)
                     }
                 </div>
-                <div className='col-9'>
-                       <div className='row row-cols-3'>
+                <div className='col-lg-9'>
+                       <div className='row row-cols-lg-3 row-cols-sm-1'>
                        { cousesData.map(course => <CourseDetails
                        key={course.id}
                        course={course}
