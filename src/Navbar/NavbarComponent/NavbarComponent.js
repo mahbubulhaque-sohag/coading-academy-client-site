@@ -30,7 +30,7 @@ const NavbarComponent = () => {
                         <Link className='me-2' to='/'>Home</Link>
                         <Link className='me-2' to='/courses'>Courses</Link>
                         <Link className='me-2'>FAQ</Link>
-                        <Link className='me-2'>Blog</Link>
+                        <Link to='/blog' className='me-2'>Blog</Link>
 
                     </Nav>
 
@@ -43,7 +43,7 @@ const NavbarComponent = () => {
                            
                         
                         <Nav.Link >
-                            {/* {user?.displayName} */}
+
                             {
                                 user?.uid ? 
                                 <>
