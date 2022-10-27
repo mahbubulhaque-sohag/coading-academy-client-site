@@ -30,7 +30,7 @@ const NavbarComponent = () => {
                     <Nav className="me-auto">
                         <Link className='me-2' to='/'>Home</Link>
                         <Link className='me-2' to='/courses'>Courses</Link>
-                        <Link className='me-2'>FAQ</Link>
+                        <Link to='/faq' className='me-2'>FAQ</Link>
                         <Link to='/blog' className='me-2'>Blog</Link>
 
                     </Nav>
