@@ -16,9 +16,9 @@ const CourseNameNav = ({course}) => {
     return (
        <div>
          
-            <Button onClick={()=>handleCourseDetail(`${id}`)}>
+            <div onClick={()=>handleCourseDetail(`${id}`)}>
             {course_name}
-            </Button>
+            </div>
        
        </div>
     );
